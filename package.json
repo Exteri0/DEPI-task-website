@@ -1,0 +1,19 @@
+{
+  "name": "websitetask",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx nodemon server",
+    "test": "jasmine"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.19.2",
+    "jasmine": "^5.1.0",
+    "nodemon": "^3.1.4",
+    "supertest": "^7.0.0"
+  }
+}
