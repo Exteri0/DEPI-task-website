@@ -21,3 +21,7 @@ It served the HTML Pages contained in the public folder on port 3000 on localhos
 4- Enter the desired text to be converted to QR Code.
 
 5- for testing, you can run the code ```npm test```
+
+
+
+NOw im testing the git commits
