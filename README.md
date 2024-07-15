@@ -1,23 +1,30 @@
-# Text to QR Project
+# React + TypeScript + Vite
 
-Project built upon a public library existing on [this repo](https://github.com/davidshimjs/qrcodejs) that creates qr codes from text strings.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-### NPM
-This project was created with the npm Package manager as it utilized Nodejs.
+Currently, two official plugins are available:
 
-### Sripts
-Server created using [Express library](https://www.npmjs.com/package/express) <br>
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-It served the HTML Pages contained in the public folder on port 3000 on localhost. <br>
+## Expanding the ESLint configuration
 
-## Steps
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-1- Run ```npm install``` <br>
+- Configure the top-level `parserOptions` property like this:
 
-2- Run ```npm start``` to start the server
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
+```
 
-3- Go to the following link to get the website "http://localhost:3000"
-
-4- Enter the desired text to be converted to QR Code.
-
-5- for testing, you can run the code ```npm test```
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
